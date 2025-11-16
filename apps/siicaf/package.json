@@ -1,0 +1,38 @@
+{
+  "name": "@vscode-idl/siicaf",
+  "version": "1.0.0",
+  "description": "Sistema de Inteligência e Investigação de Condutas Antijurídicas e Fraudes com análise Cui Bono",
+  "main": "src/main.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "dev": "ts-node src/main.ts",
+    "analyze": "node dist/main.js --analyze",
+    "report": "node dist/main.js --report"
+  },
+  "keywords": [
+    "siicaf",
+    "cui-bono",
+    "análise-jurídica",
+    "transparência",
+    "cnj",
+    "investigação"
+  ],
+  "author": "SIICAF Development Team",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "chart.js": "^4.4.3",
+    "chalk": "^4.1.2",
+    "commander": "^12.0.0",
+    "express": "^5.1.0",
+    "pdfkit": "^0.15.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.24",
+    "@types/pdfkit": "^0.13.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.7.3"
+  }
+}

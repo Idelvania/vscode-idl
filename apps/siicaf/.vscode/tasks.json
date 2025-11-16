@@ -1,0 +1,118 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "SIICAF: Análise Cui Bono",
+      "type": "shell",
+      "command": "node",
+      "args": [
+        "${workspaceFolder}/dist/main.js",
+        "demo"
+      ],
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "clear": true
+      }
+    },
+    {
+      "label": "SIICAF: Build",
+      "type": "npm",
+      "script": "build",
+      "problemMatcher": ["$tsc"],
+      "group": "build"
+    },
+    {
+      "label": "SIICAF: Análise Personalizada",
+      "type": "shell",
+      "command": "node",
+      "args": [
+        "${workspaceFolder}/dist/main.js",
+        "analyze",
+        "-p",
+        "${input:numeroProcesso}",
+        "-t",
+        "${input:tribunal}",
+        "-e",
+        "${input:estado}"
+      ],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "SIICAF: PowerShell Demo",
+      "type": "shell",
+      "command": "pwsh",
+      "args": [
+        "-File",
+        "${workspaceFolder}/siicaf-cui-bono.ps1",
+        "-Demo"
+      ],
+      "windows": {
+        "command": "powershell",
+        "args": [
+          "-ExecutionPolicy",
+          "Bypass",
+          "-File",
+          "${workspaceFolder}/siicaf-cui-bono.ps1",
+          "-Demo"
+        ]
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "id": "numeroProcesso",
+      "type": "promptString",
+      "description": "Número do Processo",
+      "default": "0123456-78.2023.8.09.0051"
+    },
+    {
+      "id": "tribunal",
+      "type": "pickString",
+      "description": "Selecione o Tribunal",
+      "options": [
+        "TJ-GO",
+        "TJ-SP",
+        "TJ-RJ",
+        "TJ-MG",
+        "TJ-DF",
+        "TJ-BA",
+        "TJ-PR",
+        "TJ-RS",
+        "TJ-SC"
+      ],
+      "default": "TJ-GO"
+    },
+    {
+      "id": "estado",
+      "type": "pickString",
+      "description": "Selecione o Estado",
+      "options": [
+        "GO",
+        "SP",
+        "RJ",
+        "MG",
+        "DF",
+        "BA",
+        "PR",
+        "RS",
+        "SC"
+      ],
+      "default": "GO"
+    }
+  ]
+}
