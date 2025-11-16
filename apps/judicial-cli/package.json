@@ -1,0 +1,25 @@
+{
+  "name": "@vscode-idl/judicial-cli",
+  "version": "1.0.0",
+  "description": "CLI para análise de estratégias judiciais usando Teoria de Nash",
+  "main": "src/main.ts",
+  "bin": {
+    "judicial-nash": "./dist/main.js",
+    "siicaf-nash": "./dist/main.js"
+  },
+  "keywords": [
+    "judicial",
+    "nash",
+    "game-theory",
+    "siicaf",
+    "legal"
+  ],
+  "author": "Dra. Idelvânia Menezes de Araújo - OAB/GO 64.265-A",
+  "license": "PROPRIETARY",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "chalk": "^4.1.2",
+    "inquirer": "^8.2.5",
+    "ora": "^5.4.1"
+  }
+}

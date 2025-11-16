@@ -1,0 +1,158 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "SIICAF: Analisar Acordo",
+      "type": "shell",
+      "command": "node",
+      "args": [
+        "${workspaceFolder}/dist/apps/judicial-cli/main.js",
+        "settlement",
+        "--valor",
+        "${input:valorCausa}",
+        "--evidencia",
+        "${input:evidencia}",
+        "--custo",
+        "${input:custoLitigacao}",
+        "--output",
+        "${workspaceFolder}/reports/acordo-${input:nomeProcesso}.html",
+        "--format",
+        "html"
+      ],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "SIICAF: Analisar Delação",
+      "type": "shell",
+      "command": "node",
+      "args": [
+        "${workspaceFolder}/dist/apps/judicial-cli/main.js",
+        "plea-bargain",
+        "--max-sentence",
+        "${input:penaMaxima}",
+        "--output",
+        "${workspaceFolder}/reports/delacao-${input:nomeProcesso}.html",
+        "--format",
+        "html"
+      ],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "SIICAF: Analisar Recurso",
+      "type": "shell",
+      "command": "node",
+      "args": [
+        "${workspaceFolder}/dist/apps/judicial-cli/main.js",
+        "appeal",
+        "--julgamento",
+        "${input:valorSentenca}",
+        "--custo",
+        "${input:custoRecurso}",
+        "--reversao",
+        "${input:probabilidadeReversao}",
+        "--output",
+        "${workspaceFolder}/reports/recurso-${input:nomeProcesso}.html",
+        "--format",
+        "html"
+      ],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "SIICAF: Análise Customizada",
+      "type": "shell",
+      "command": "node",
+      "args": [
+        "${workspaceFolder}/dist/apps/judicial-cli/main.js",
+        "custom",
+        "--input",
+        "${input:arquivoConfig}",
+        "--output",
+        "${workspaceFolder}/reports/custom-${input:nomeProcesso}.html",
+        "--format",
+        "html"
+      ],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "SIICAF: Build CLI",
+      "type": "shell",
+      "command": "npx",
+      "args": ["nx", "build", "judicial-cli"],
+      "problemMatcher": ["$tsc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "id": "nomeProcesso",
+      "type": "promptString",
+      "description": "Nome/Número do Processo"
+    },
+    {
+      "id": "valorCausa",
+      "type": "promptString",
+      "description": "Valor da Causa (R$)",
+      "default": "100000"
+    },
+    {
+      "id": "evidencia",
+      "type": "promptString",
+      "description": "Força das Evidências (0.0 a 1.0)",
+      "default": "0.7"
+    },
+    {
+      "id": "custoLitigacao",
+      "type": "promptString",
+      "description": "Custos de Litigação (R$)",
+      "default": "20000"
+    },
+    {
+      "id": "penaMaxima",
+      "type": "promptString",
+      "description": "Pena Máxima (anos)",
+      "default": "10"
+    },
+    {
+      "id": "valorSentenca",
+      "type": "promptString",
+      "description": "Valor da Sentença (R$)",
+      "default": "80000"
+    },
+    {
+      "id": "custoRecurso",
+      "type": "promptString",
+      "description": "Custo do Recurso (R$)",
+      "default": "20000"
+    },
+    {
+      "id": "probabilidadeReversao",
+      "type": "promptString",
+      "description": "Probabilidade de Reversão (0.0 a 1.0)",
+      "default": "0.3"
+    },
+    {
+      "id": "arquivoConfig",
+      "type": "promptString",
+      "description": "Caminho do arquivo de configuração JSON"
+    }
+  ]
+}

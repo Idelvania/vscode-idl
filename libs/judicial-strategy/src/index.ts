@@ -18,3 +18,6 @@ export * from './lib/nash-solver';
 
 // Jogos judiciais
 export * from './lib/judicial-game';
+
+// Integração SIICAF
+export * from './lib/siicaf/siicaf-integration';

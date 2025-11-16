@@ -1,0 +1,64 @@
+{
+  "processo": {
+    "numeroProcesso": "9876543-21.2023.8.09.0099",
+    "tipo": "criminal",
+    "status": "ativo",
+    "dataAbertura": "2023-06-10T00:00:00.000Z",
+    "descricao": "Investigação de fraude contra a administração pública",
+    "partes": [
+      {
+        "nome": "Ministério Público Estadual",
+        "tipo": "promotor",
+        "advogado": "Dra. Maria Promotora - MP/GO"
+      },
+      {
+        "nome": "Suspeito 1 - José Oliveira",
+        "tipo": "reu",
+        "documento": "123.456.789-00",
+        "advogado": "Dra. Idelvânia Menezes de Araújo - OAB/GO 64.265-A"
+      },
+      {
+        "nome": "Suspeito 2 - Carlos Mendes",
+        "tipo": "reu",
+        "documento": "987.654.321-00",
+        "advogado": "Dr. Pedro Defensor - OAB/GO 54321"
+      }
+    ],
+    "evidencias": [
+      {
+        "tipo": "documento",
+        "descricao": "Documentos fiscais fraudados",
+        "forca": 0.8,
+        "data": "2023-06-15T00:00:00.000Z",
+        "arquivo": "documentos-fiscais.pdf"
+      },
+      {
+        "tipo": "pericia",
+        "descricao": "Perícia grafotécnica confirma falsificação",
+        "forca": 0.9,
+        "data": "2023-07-01T00:00:00.000Z",
+        "arquivo": "pericia-grafotecnica.pdf"
+      },
+      {
+        "tipo": "testemunho",
+        "descricao": "Testemunha chave disposta a colaborar",
+        "forca": 0.7,
+        "data": "2023-07-15T00:00:00.000Z"
+      }
+    ],
+    "metadata": {
+      "vara": "Vara Criminal Especializada",
+      "comarca": "Goiânia",
+      "estado": "GO",
+      "fase": "investigação",
+      "gravidade": "alto",
+      "valorFraude": 500000
+    }
+  },
+  "parametrosAnalise": {
+    "tipoAnalise": "delacao",
+    "penaMaxima": 12,
+    "analista": "Dra. Idelvânia Menezes de Araújo",
+    "observacoes": "Análise de viabilidade de delação premiada para Suspeito 1"
+  }
+}

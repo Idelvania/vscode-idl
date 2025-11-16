@@ -1,0 +1,65 @@
+{
+  "processo": {
+    "numeroProcesso": "5555555-55.2022.8.09.0051",
+    "tipo": "trabalhista",
+    "status": "em_recurso",
+    "dataAbertura": "2022-03-20T00:00:00.000Z",
+    "valorCausa": 80000,
+    "descricao": "Reclamação trabalhista - horas extras e verbas rescisórias",
+    "partes": [
+      {
+        "nome": "Maria Trabalhadora Silva",
+        "tipo": "autor",
+        "documento": "111.222.333-44",
+        "advogado": "Dra. Idelvânia Menezes de Araújo - OAB/GO 64.265-A"
+      },
+      {
+        "nome": "Empresa Construtora ABC Ltda",
+        "tipo": "reu",
+        "documento": "55.666.777/0001-88",
+        "advogado": "Dr. Roberto Empresarial - OAB/GO 99999",
+        "recursos": 500000
+      }
+    ],
+    "evidencias": [
+      {
+        "tipo": "documento",
+        "descricao": "Cartões de ponto demonstrando horas extras",
+        "forca": 0.75,
+        "data": "2022-04-10T00:00:00.000Z"
+      },
+      {
+        "tipo": "testemunho",
+        "descricao": "Ex-colegas confirmam jornada excessiva",
+        "forca": 0.65,
+        "data": "2022-05-15T00:00:00.000Z"
+      },
+      {
+        "tipo": "pericia",
+        "descricao": "Perícia trabalhista calculou R$ 80.000 devidos",
+        "forca": 0.8,
+        "data": "2022-06-20T00:00:00.000Z"
+      }
+    ],
+    "metadata": {
+      "vara": "2ª Vara do Trabalho",
+      "comarca": "Goiânia",
+      "estado": "GO",
+      "fase": "recurso",
+      "sentencaPrimeiraInstancia": {
+        "data": "2023-08-01T00:00:00.000Z",
+        "valorCondenacao": 80000,
+        "favoravel": "autor",
+        "resumo": "Empresa condenada a pagar R$ 80.000 em verbas trabalhistas"
+      }
+    }
+  },
+  "parametrosAnalise": {
+    "tipoAnalise": "recurso",
+    "valorSentenca": 80000,
+    "custoRecurso": 18000,
+    "probabilidadeReversao": 0.25,
+    "analista": "Dra. Idelvânia Menezes de Araújo",
+    "observacoes": "Análise de viabilidade de recurso ordinário pela empresa ré"
+  }
+}

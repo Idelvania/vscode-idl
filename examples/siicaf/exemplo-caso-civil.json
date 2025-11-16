@@ -1,0 +1,68 @@
+{
+  "processo": {
+    "numeroProcesso": "1234567-89.2023.8.09.0051",
+    "tipo": "civil",
+    "status": "ativo",
+    "dataAbertura": "2023-01-15T00:00:00.000Z",
+    "valorCausa": 150000,
+    "descricao": "Ação de cobrança por descumprimento contratual",
+    "partes": [
+      {
+        "nome": "João Silva Transportes ME",
+        "tipo": "autor",
+        "documento": "12.345.678/0001-90",
+        "advogado": "Dra. Idelvânia Menezes de Araújo - OAB/GO 64.265-A",
+        "recursos": 50000
+      },
+      {
+        "nome": "Empresa XYZ Logística Ltda",
+        "tipo": "reu",
+        "documento": "98.765.432/0001-10",
+        "advogado": "Dr. Carlos Santos - OAB/GO 12345",
+        "recursos": 200000
+      }
+    ],
+    "evidencias": [
+      {
+        "tipo": "documento",
+        "descricao": "Contrato de prestação de serviços assinado por ambas as partes",
+        "forca": 0.9,
+        "data": "2023-02-01T00:00:00.000Z",
+        "arquivo": "contrato.pdf"
+      },
+      {
+        "tipo": "documento",
+        "descricao": "E-mails comprovando tentativa de negociação",
+        "forca": 0.7,
+        "data": "2023-02-15T00:00:00.000Z",
+        "arquivo": "emails.pdf"
+      },
+      {
+        "tipo": "testemunho",
+        "descricao": "Testemunhas presenciaram negociações",
+        "forca": 0.6,
+        "data": "2023-03-01T00:00:00.000Z"
+      },
+      {
+        "tipo": "pericia",
+        "descricao": "Perícia contábil identificou prejuízo de R$ 150.000",
+        "forca": 0.85,
+        "data": "2023-03-15T00:00:00.000Z",
+        "arquivo": "pericia.pdf"
+      }
+    ],
+    "metadata": {
+      "vara": "1ª Vara Cível de Goiânia",
+      "comarca": "Goiânia",
+      "estado": "GO",
+      "fase": "instrução"
+    }
+  },
+  "parametrosAnalise": {
+    "tipoAnalise": "acordo",
+    "valorCausa": 150000,
+    "evidencia": 0.78,
+    "custoLitigacao": 25000,
+    "analista": "Dra. Idelvânia Menezes de Araújo"
+  }
+}
